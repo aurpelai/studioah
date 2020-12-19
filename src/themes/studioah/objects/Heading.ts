@@ -8,7 +8,7 @@ const Heading = {
     margin: 0;
   `,
   Main2: css`
-    color: ${({ theme }) => theme.colors.GREY_900};
+    color: ${({ theme }) => theme.colors.GREY_800};
     font-size: ${({ theme }) => theme.fontSizes.XLARGE};
     font-weight: ${({ theme }) => theme.fontWeights.LIGHT};
     margin: 0;

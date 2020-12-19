@@ -40,10 +40,10 @@ const Projects = () => {
               </StyledTitle>
 
               <StyledDetails>
-                {project.competition && `${translatePlacement(project.competition)} / `}
+                {project.competition && `${translatePlacement(project.competition)} \u00B7 `}
                 {project.date}
-                {project.location && ` / ${project.location.city}`}
-                {project.location?.details && ` / ${translateString(project.location.details)}`}
+                {project.location && ` \u00B7 ${project.location.city}`}
+                {project.location?.details && ` \u00B7 ${translateString(project.location.details)}`}
               </StyledDetails>
 
               {project.description && (

@@ -13,7 +13,7 @@ import {
   StyledHighlight,
   StyledHighlightHeader,
   StyledHighlights,
-  StyledImageContainer,
+  StyledImage,
   StyledParagraph,
   StyledStory,
 } from './About.styles';
@@ -26,9 +26,9 @@ const About = () => {
 
   return (
     <StyledAbout>
-      <StyledImageContainer>
+      <StyledImage>
         <Diagram />
-      </StyledImageContainer>
+      </StyledImage>
 
       <StyledStory>
         {translatedStory.map((paragraph) => (
@@ -47,7 +47,7 @@ const About = () => {
           {highlightProjects.map((project) => (
             <StyledHighlight key={translateString(project.title)}>
               <StyledHighlightHeader>
-                {`${project.date} ${translateString(project.title)}`}
+                {`${project.date} \u00B7 ${translateString(project.title)}`}
                 {project.competition && `, ${translatePlacement(project.competition, { toLowerCase: true })}`}
               </StyledHighlightHeader>
               <div>

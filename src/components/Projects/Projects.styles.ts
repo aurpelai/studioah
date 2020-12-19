@@ -2,20 +2,20 @@ import styled from 'styled-components';
 
 export const StyledDescription = styled.div`
   color: ${({ theme }) => theme.colors.GREY_700};
-  font-size: ${({ theme }) => theme.fontSizes.LARGE};
   text-align: center;
 `;
 
 export const StyledDetails = styled.div`
   color: ${({ theme }) => theme.colors.GREY_800};
-  font-size: ${({ theme }) => theme.fontSizes.LARGE};
-  margin: ${({ theme }) => theme.spacing.XXSMALL};
+  margin: ${({ theme }) => theme.spacing.XXXSMALL};
   text-align: center;
 `;
 
 export const StyledTitle = styled.div`
   ${({ theme }) => theme.objects.Heading.Main2};
-  margin: ${({ theme }) => theme.spacing.XXSMALL};
+  font-size: ${({ theme }) => theme.fontSizes.LARGE};
+  font-weight: ${({ theme }) => theme.fontWeights.MEDIUM};
+  margin: ${({ theme }) => theme.spacing.XXXSMALL};
   text-align: center;
 `;
 

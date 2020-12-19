@@ -3,6 +3,20 @@ import { StyledSocialMediaLogoType } from './Contact.types';
 
 export const StyledPersonInfo = styled.div``;
 
+export const StyledImage = styled.div`
+  margin: 0 0 ${({ theme }) => theme.spacing.XXLARGE};
+  width: 25rem;
+
+  > svg {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+export const StyledContent = styled.section`
+  margin: ${({ theme }) => theme.spacing.XLARGE} 0;
+`;
+
 export const StyledPersonName = styled(StyledPersonInfo)`
   ${({ theme }) => theme.objects.Heading.Main3};
 `;

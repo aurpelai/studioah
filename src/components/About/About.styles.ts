@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-export const StyledImageContainer = styled.div`
+export const StyledImage = styled.div`
+  margin: 0 0 ${({ theme }) => theme.spacing.XXLARGE};
   width: 25rem;
 
   > svg {
