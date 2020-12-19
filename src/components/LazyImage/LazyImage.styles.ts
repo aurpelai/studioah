@@ -15,11 +15,12 @@ const animation = (theme: DefaultTheme) => keyframes`
   }
 `;
 
-export const StyledPlaceholder = styled.div`
+export const StyledPlaceholder = styled.div<StyledImageType>`
   animation: ${({ theme }) => theme.durations.XSLOW}ms ease-in-out infinite ${({ theme }) => css` ${animation(theme)} `};
   bottom: 0;
   height: 100%;
   left: 0;
+  opacity: ${({ isLoaded }) => (isLoaded ? 0 : 1)};
   position: absolute;
   right: 0;
   top: 0;
@@ -28,19 +29,17 @@ export const StyledPlaceholder = styled.div`
 
 export const StyledImage = styled.img<StyledImageType>`
   ${({ theme }) => theme.mixins.Transition({ target: 'opacity', duration: theme.durations.SLOW })}
-  bottom: 0;
   height: 100%;
-  left: 0;
   opacity: ${({ isLoaded }) => (isLoaded ? 1 : 0)};
-  position: absolute;
-  right: 0;
-  top: 0;
   width: 100%;
 `;
 
 export const StyledLazyImage = styled.div`
-  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  max-width: 100vw;
   overflow: hidden;
-  height: ${({ theme }) => `calc(${theme.dimensions.IMAGE_ASPECT_RATIO} * ${theme.dimensions.IMAGE_MAX_WIDTH})`};
+  position: relative;
   width: ${({ theme }) => theme.dimensions.IMAGE_MAX_WIDTH};
 `;

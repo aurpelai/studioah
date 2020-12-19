@@ -24,7 +24,7 @@ const LazyImage = ({
 
   return (
     <StyledLazyImage>
-      <StyledPlaceholder />
+      <StyledPlaceholder isLoaded={isLoaded} />
       <StyledImage
         alt={alt}
         isLoaded={isLoaded}
