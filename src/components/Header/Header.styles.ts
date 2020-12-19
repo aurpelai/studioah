@@ -62,6 +62,7 @@ export const StyledHeader = styled.header<StyledHeaderType>`
   position: sticky;
   top: 0;
   z-index: ${({ theme }) => theme.zIndices.HIGH};
+  width: 100%;
 
   ${({ isStuck, theme }) => isStuck && css`
     border-bottom: ${theme.strokeWidths.THIN} solid ${theme.colors.GREY_200};
