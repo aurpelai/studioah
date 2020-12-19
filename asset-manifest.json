@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/studioah/static/js/main.8a6d9cb2.chunk.js",
-    "main.js.map": "/studioah/static/js/main.8a6d9cb2.chunk.js.map",
+    "main.js": "/studioah/static/js/main.cde47619.chunk.js",
+    "main.js.map": "/studioah/static/js/main.cde47619.chunk.js.map",
     "runtime-main.js": "/studioah/static/js/runtime-main.7d6a89a3.js",
     "runtime-main.js.map": "/studioah/static/js/runtime-main.7d6a89a3.js.map",
     "static/js/2.6570ed35.chunk.js": "/studioah/static/js/2.6570ed35.chunk.js",
@@ -22,7 +22,7 @@
     "static/media/asuntoreformi-4.jpg": "/studioah/static/media/asuntoreformi-4.71f8e610.jpg",
     "static/media/asuntoreformi-5.jpg": "/studioah/static/media/asuntoreformi-5.fb06a197.jpg",
     "static/media/asuntoreformi-6.jpg": "/studioah/static/media/asuntoreformi-6.2ca9c97e.jpg",
-    "static/media/diagram.60515f11.svg": "/studioah/static/media/diagram.60515f11.svg",
+    "static/media/diagram.47a71850.svg": "/studioah/static/media/diagram.47a71850.svg",
     "static/media/domus-0.jpg": "/studioah/static/media/domus-0.ab6f7821.jpg",
     "static/media/domus-1.jpg": "/studioah/static/media/domus-1.bc0f0f51.jpg",
     "static/media/domus-2.jpg": "/studioah/static/media/domus-2.70bf6209.jpg",
@@ -58,6 +58,7 @@
     "static/media/linnanniemi-3.jpg": "/studioah/static/media/linnanniemi-3.31f6e562.jpg",
     "static/media/linnanniemi-4.jpg": "/studioah/static/media/linnanniemi-4.b9b3921e.jpg",
     "static/media/linnanniemi-5.jpg": "/studioah/static/media/linnanniemi-5.bda42565.jpg",
+    "static/media/people.76891443.svg": "/studioah/static/media/people.76891443.svg",
     "static/media/psykiatrinen-0.jpg": "/studioah/static/media/psykiatrinen-0.59e481ed.jpg",
     "static/media/psykiatrinen-1.jpg": "/studioah/static/media/psykiatrinen-1.c232a5e2.jpg",
     "static/media/ratina-0.jpg": "/studioah/static/media/ratina-0.00fc8730.jpg",
@@ -92,6 +93,6 @@
   "entrypoints": [
     "static/js/runtime-main.7d6a89a3.js",
     "static/js/2.6570ed35.chunk.js",
-    "static/js/main.8a6d9cb2.chunk.js"
+    "static/js/main.cde47619.chunk.js"
   ]
 }
