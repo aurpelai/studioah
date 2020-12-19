@@ -1,0 +1,35 @@
+{
+  "processors": [
+    ["stylelint-processor-styled-components", {
+      "moduleName": "styled-components"
+    }]
+  ],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-styled-components"
+  ],
+  "rules": {
+    "color-named": "never",
+    "color-no-hex": true,
+    "declaration-empty-line-before": null,
+    "function-disallowed-list": ["rgb", "rgba"],
+    "function-calc-no-invalid": null,
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignoreTypes": [
+          "/-styled-mixin/"
+        ]
+      }
+    ],
+    "string-no-newline": null,
+    "value-keyword-case": [
+      "lower",
+      {
+        "ignoreProperties": [
+          "/-styled-mixin/"
+        ]
+      }
+    ]
+  }
+}
