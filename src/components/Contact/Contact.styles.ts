@@ -31,7 +31,7 @@ export const StyledPerson = styled.li`
   }
 `;
 
-export const StyledContactList = styled.ul`
+const StyledList = styled.ul`
   &:not(:last-of-type) {
     margin-bottom: ${({ theme }) => theme.spacing.XXXLARGE};
   }
@@ -39,6 +39,14 @@ export const StyledContactList = styled.ul`
   &:first-of-type {
     margin-top: ${({ theme }) => theme.spacing.XXLARGE};
   }
+`;
+
+export const StyledContactList = styled(StyledList)``;
+
+export const StyledSocialMediaLogos = styled(StyledList)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const StyledSocialMediaLogo = styled.div<StyledSocialMediaLogoType>`

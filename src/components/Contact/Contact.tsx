@@ -12,6 +12,7 @@ import {
   StyledPersonInfo,
   StyledPersonName,
   StyledSocialMediaLogo,
+  StyledSocialMediaLogos,
 } from './Contact.styles';
 
 const Contact = () => {
@@ -40,7 +41,7 @@ const Contact = () => {
           ))}
         </StyledContactList>
 
-        <StyledContactList>
+        <StyledSocialMediaLogos>
           {social.map((datum) => (
             <a
               href={datum.url}
@@ -52,7 +53,7 @@ const Contact = () => {
               <StyledSocialMediaLogo imageUrl={`/images/social/${datum.image}`} />
             </a>
           ))}
-        </StyledContactList>
+        </StyledSocialMediaLogos>
       </StyledContent>
     </StyledContact>
   );
