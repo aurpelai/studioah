@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/studioah/static/js/main.78d3b4cb.chunk.js",
-    "main.js.map": "/studioah/static/js/main.78d3b4cb.chunk.js.map",
+    "main.js": "/studioah/static/js/main.8a6d9cb2.chunk.js",
+    "main.js.map": "/studioah/static/js/main.8a6d9cb2.chunk.js.map",
     "runtime-main.js": "/studioah/static/js/runtime-main.7d6a89a3.js",
     "runtime-main.js.map": "/studioah/static/js/runtime-main.7d6a89a3.js.map",
-    "static/js/2.795e3e55.chunk.js": "/studioah/static/js/2.795e3e55.chunk.js",
-    "static/js/2.795e3e55.chunk.js.map": "/studioah/static/js/2.795e3e55.chunk.js.map",
+    "static/js/2.6570ed35.chunk.js": "/studioah/static/js/2.6570ed35.chunk.js",
+    "static/js/2.6570ed35.chunk.js.map": "/studioah/static/js/2.6570ed35.chunk.js.map",
     "index.html": "/studioah/index.html",
-    "static/js/2.795e3e55.chunk.js.LICENSE.txt": "/studioah/static/js/2.795e3e55.chunk.js.LICENSE.txt",
+    "static/js/2.6570ed35.chunk.js.LICENSE.txt": "/studioah/static/js/2.6570ed35.chunk.js.LICENSE.txt",
     "static/media/aalto-0.jpg": "/studioah/static/media/aalto-0.49212b6e.jpg",
     "static/media/aalto-1.jpg": "/studioah/static/media/aalto-1.39d8edee.jpg",
     "static/media/aalto-2.jpg": "/studioah/static/media/aalto-2.97aede1f.jpg",
@@ -91,7 +91,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.7d6a89a3.js",
-    "static/js/2.795e3e55.chunk.js",
-    "static/js/main.78d3b4cb.chunk.js"
+    "static/js/2.6570ed35.chunk.js",
+    "static/js/main.8a6d9cb2.chunk.js"
   ]
 }
