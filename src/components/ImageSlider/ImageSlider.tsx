@@ -1,4 +1,5 @@
 import React, { memo, useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
 import theme from '../../themes/studioah';
 import Icon from '../Icon/Icon';
 import LazyImage from '../LazyImage/LazyImage';
@@ -29,6 +30,24 @@ const ImageSlider = ({ images }: ImageSiderType) => {
     }
   };
 
+  const handlers = useSwipeable({
+    onSwiped: (eventData) => {
+      switch (eventData.dir) {
+        case 'Left': {
+          slideRight();
+          break;
+        }
+        case 'Right': {
+          slideLeft();
+          break;
+        }
+        default: {
+          break;
+        }
+      }
+    },
+  });
+
   if (images.length === 0) {
     return null;
   }
@@ -54,7 +73,12 @@ const ImageSlider = ({ images }: ImageSiderType) => {
     <StyledImageSlider>
       <LazyImage src={images[currentImage].src} />
 
-      <StyledImageButtonContainer onKeyDown={handleKeyDown} tabIndex={-1}>
+      <StyledImageButtonContainer
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...handlers}
+        onKeyDown={handleKeyDown}
+        tabIndex={-1}
+      >
         <StyledImageLeftButton onClick={slideLeft} onKeyDown={handleKeyDown} />
         <StyledImageRightButton onClick={slideRight} onKeyDown={handleKeyDown} />
       </StyledImageButtonContainer>
