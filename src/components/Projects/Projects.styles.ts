@@ -7,13 +7,15 @@ export const StyledDescription = styled.div`
 `;
 
 export const StyledDetails = styled.div`
-  color: ${({ theme }) => theme.colors.GREY_700};
+  color: ${({ theme }) => theme.colors.GREY_800};
   font-size: ${({ theme }) => theme.fontSizes.LARGE};
+  margin: ${({ theme }) => theme.spacing.XXSMALL};
   text-align: center;
 `;
 
 export const StyledTitle = styled.div`
   ${({ theme }) => theme.objects.Heading.Main2};
+  margin: ${({ theme }) => theme.spacing.XXSMALL};
   text-align: center;
 `;
 

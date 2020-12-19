@@ -27,7 +27,6 @@ export const StyledImageNavigationContainer = styled.ol`
   display: flex;
   justify-content: center;
   list-style: none;
-  margin-bottom: ${({ theme }) => theme.spacing.XLARGE};
   padding-inline-start: 0;
 `;
 
