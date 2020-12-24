@@ -7,7 +7,7 @@ const Footer = () => (
     <StyledCompanyName>
       {company.fullName}
     </StyledCompanyName>
-    <StyledEmail>
+    <StyledEmail href={`mailto:${company.email}`}>
       {company.email}
     </StyledEmail>
   </StyledFooter>

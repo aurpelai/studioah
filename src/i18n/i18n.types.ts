@@ -1,4 +1,4 @@
-import { PlacementType } from '../types/Project.types';
+import { CategoryType, PlacementType } from '../types/Project.types';
 
 export interface TranslatableStringArrayType {
   en: string[],
@@ -15,6 +15,10 @@ export type LanguageType =
   | 'fi';
 
 export interface TranslationType {
+  Categories: Record<CategoryType, string>,
+  Common: {
+    all: string,
+  },
   Headlines: {
     highlights: string,
   },

@@ -1,6 +1,16 @@
+import { CategoryType } from '../../types/Project.types';
 import { TranslationType } from '../i18n.types';
 
 const finnish: TranslationType = {
+  Categories: {
+    [CategoryType.housing]: 'Asuminen',
+    [CategoryType.landscape]: 'Maisema',
+    [CategoryType.public]: 'Julkinen',
+    [CategoryType.urban]: 'Kaupunki',
+  },
+  Common: {
+    all: 'Kaikki',
+  },
   Headlines: {
     highlights: 'Valikoidut kilpailut',
   },

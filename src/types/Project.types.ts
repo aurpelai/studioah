@@ -26,12 +26,15 @@ interface LocationType {
   details?: TranslatableStringType,
 }
 
-type ProjectStatusType =
-  | 'implementation';
+export enum CategoryType {
+  housing = 'housing',
+  landscape = 'landscape',
+  public = 'public',
+  urban = 'urban',
+}
 
-type CategoryType =
-  | 'architecture'
-  | 'thesis';
+type ColorNamesType = keyof typeof CategoryType;
+export type ColorValuesType = typeof CategoryType[ColorNamesType];
 
 export interface ProjectType {
   categories: CategoryType[],
@@ -41,6 +44,5 @@ export interface ProjectType {
   imageFolder: string,
   isHighlight: boolean,
   location?: LocationType,
-  status?: ProjectStatusType,
   title: TranslatableStringType,
 }

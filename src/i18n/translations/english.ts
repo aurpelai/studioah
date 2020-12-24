@@ -1,6 +1,16 @@
+import { CategoryType } from '../../types/Project.types';
 import { TranslationType } from '../i18n.types';
 
 const english: TranslationType = {
+  Categories: {
+    [CategoryType.housing]: 'Housing',
+    [CategoryType.landscape]: 'Landscape',
+    [CategoryType.public]: 'Public',
+    [CategoryType.urban]: 'Urban',
+  },
+  Common: {
+    all: 'All',
+  },
   Headlines: {
     highlights: 'Selected Works',
   },

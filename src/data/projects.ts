@@ -1,9 +1,13 @@
 /* eslint-disable max-len */
-import { ProjectType } from '../types/Project.types';
+import { CategoryType, ProjectType } from '../types/Project.types';
 
 const projects: ProjectType[] = [
   {
-    categories: ['architecture'],
+    categories: [
+      CategoryType.landscape,
+      CategoryType.public,
+      CategoryType.urban,
+    ],
     competition: {
       category: 'ideation',
       placement: 'purchase',
@@ -25,7 +29,7 @@ const projects: ProjectType[] = [
     },
   },
   {
-    categories: ['architecture'],
+    categories: [CategoryType.housing],
     competition: {
       category: 'architecture',
       placement: 'first',
@@ -41,14 +45,16 @@ const projects: ProjectType[] = [
       city: 'Tampere',
       country: 'Finland',
     },
-    status: 'implementation',
     title: {
       en: 'Housing Reform 2018',
       fi: 'Asuntoreformi 2018',
     },
   },
   {
-    categories: ['architecture'],
+    categories: [
+      CategoryType.landscape,
+      CategoryType.public,
+    ],
     competition: {
       category: 'ideation',
       placement: 'first',
@@ -68,14 +74,17 @@ const projects: ProjectType[] = [
       city: 'Jyväskylä',
       country: 'Finland',
     },
-    status: 'implementation',
     title: {
       en: 'Extension of the Alvar Aalto Museum and the Museum of Central Finland',
       fi: 'Alvar Aalto -museon ja Keski-Suomen museon nivelosa',
     },
   },
   {
-    categories: ['architecture'],
+    categories: [
+      CategoryType.housing,
+      CategoryType.landscape,
+      CategoryType.urban,
+    ],
     competition: {
       category: 'ideation',
       placement: 'second',
@@ -101,7 +110,10 @@ const projects: ProjectType[] = [
     },
   },
   {
-    categories: ['architecture'],
+    categories: [
+      CategoryType.housing,
+      CategoryType.urban,
+    ],
     competition: {
       category: 'architecture',
       placement: 'entry',
@@ -123,7 +135,7 @@ const projects: ProjectType[] = [
     },
   },
   {
-    categories: ['architecture'],
+    categories: [CategoryType.housing],
     competition: {
       category: 'architecture',
       placement: 'entry',
@@ -145,7 +157,10 @@ const projects: ProjectType[] = [
     },
   },
   {
-    categories: ['architecture'],
+    categories: [
+      CategoryType.landscape,
+      CategoryType.urban,
+    ],
     competition: {
       category: 'architecture',
       placement: 'entry',
@@ -171,7 +186,11 @@ const projects: ProjectType[] = [
     },
   },
   {
-    categories: ['architecture'],
+    categories: [
+      CategoryType.landscape,
+      CategoryType.public,
+      CategoryType.urban,
+    ],
     competition: {
       category: 'architecture',
       placement: 'entry',
@@ -193,7 +212,7 @@ const projects: ProjectType[] = [
     },
   },
   {
-    categories: ['architecture', 'thesis'],
+    categories: [CategoryType.public],
     date: 2017,
     description: {
       en: 'Developing a user-centric and adaptable care environment',
@@ -215,7 +234,7 @@ const projects: ProjectType[] = [
     },
   },
   {
-    categories: ['architecture', 'thesis'],
+    categories: [CategoryType.housing],
     date: 2017,
     description: {
       en: 'Developing modular wooden housing',
@@ -237,7 +256,10 @@ const projects: ProjectType[] = [
     },
   },
   {
-    categories: ['architecture', 'thesis'],
+    categories: [
+      CategoryType.landscape,
+      CategoryType.urban,
+    ],
     date: 2016,
     description: {
       en: 'Renewing an urban waterfront area',
@@ -259,7 +281,7 @@ const projects: ProjectType[] = [
     },
   },
   {
-    categories: ['architecture', 'thesis'],
+    categories: [CategoryType.housing],
     date: 2016,
     description: {
       en: '',
@@ -281,7 +303,10 @@ const projects: ProjectType[] = [
     },
   },
   {
-    categories: ['architecture'],
+    categories: [
+      CategoryType.housing,
+      CategoryType.urban,
+    ],
     competition: {
       category: 'ideation',
       placement: 'sharedFirst',

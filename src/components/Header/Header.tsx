@@ -9,6 +9,7 @@ import useIntersectionObserver from '../../hooks/useIntersectionObserver';
 import i18n from '../../i18n/i18n';
 import { LanguageType } from '../../i18n/i18n.types';
 import NavigationMenuDefinitions from '../../routes/NavigationMenuDefinitions';
+import RouteDefinitions from '../../routes/RouteDefinitions';
 import {
   StyledHeader,
   StyledLanguageToggle,
@@ -49,9 +50,7 @@ const Header = () => {
       isStuck={headerIsStuck}
       ref={headerRef}
     >
-      <StyledLogo
-        onClick={() => window.scrollTo(0, 0)}
-      >
+      <StyledLogo to={RouteDefinitions.Projects.path}>
         A / H
       </StyledLogo>
       <StyledNavigationBar>
@@ -63,7 +62,7 @@ const Header = () => {
               </StyledNavLink>
             </StyledNavLinkItem>
           ))}
-          <StyledLanguageToggle onClick={toggleLanguage} onKeyDown={handleLanguageKeyDown} tabIndex={0}>
+          <StyledLanguageToggle onClick={toggleLanguage} onKeyDown={handleLanguageKeyDown} role="button" tabIndex={0}>
             {t(currentLanguage === 'fi' ? 'Translation.en' : 'Translation.fi')}
           </StyledLanguageToggle>
         </StyledNavLinkList>

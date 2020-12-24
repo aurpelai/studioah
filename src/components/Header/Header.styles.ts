@@ -6,7 +6,7 @@ const StyledHeaderLink = styled(NavLink)`
   ${({ theme }) => theme.mixins.AccessiblyRemoveFocusRing()}
 `;
 
-export const StyledLogo = styled.div`
+export const StyledLogo = styled(NavLink)`
   ${({ theme }) => theme.mixins.AccessiblyRemoveFocusRing()}
   ${({ theme }) => theme.objects.Anchor.BaseAnchor};
 `;
@@ -46,7 +46,7 @@ export const StyledNavLinkList = styled.ul`
 export const StyledNavigationBar = styled.nav`
   display: flex;
   flex-flow: row wrap;
-  margin-top: ${({ theme }) => theme.spacing.XSMALL};
+  margin-top: ${({ theme }) => theme.spacing.MEDIUM};
   max-width: ${({ theme }) => theme.dimensions.MAIN_CONTENT_MAX_WIDTH};
   width: 100%;
 `;
@@ -58,7 +58,7 @@ export const StyledHeader = styled.header<StyledHeaderType>`
   flex-flow: column nowrap;
   font-size: ${({ theme }) => theme.fontSizes.XXXLARGE};
   justify-content: center;
-  margin: ${({ theme }) => theme.spacing.XXXLARGE} auto;
+  margin: ${({ theme }) => `${theme.spacing.XXXLARGE} auto 0`};
   padding: ${({ theme }) => `${theme.spacing.XLARGE} 0 ${theme.spacing.MEDIUM}`};
   position: sticky;
   top: 0;
