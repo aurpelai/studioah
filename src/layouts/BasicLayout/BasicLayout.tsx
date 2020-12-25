@@ -1,13 +1,13 @@
 import React, { memo, useContext, useEffect } from 'react';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
-import { GlobalStore } from '../../context/StateProvider/StateProvider';
+import { StoreContext } from '../../context/StateProvider/StateProvider';
 import { GlobalStyles } from '../../themes/studioah';
 import { ComponentWithChildren } from '../../types/Component.types';
 import { StyledContent } from './BasicLayout.styles';
 
 const BasicLayout = ({ children }: ComponentWithChildren) => {
-  const { dispatch } = useContext(GlobalStore);
+  const { dispatch } = useContext(StoreContext);
 
   useEffect(() => {
     const handleMouseDownOnce = () => {

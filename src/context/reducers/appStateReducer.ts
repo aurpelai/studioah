@@ -14,6 +14,12 @@ const appStateReducer: AppStateReducerType = (state, action) => {
         isTabbingAround: false,
       };
     }
+    case 'SHOW_PROJECTS_FILTER': {
+      return {
+        ...state,
+        isProjectsFilterVisible: true,
+      };
+    }
     case 'SET_PROJECTS_FILTER': {
       return {
         ...state,
@@ -24,6 +30,18 @@ const appStateReducer: AppStateReducerType = (state, action) => {
       return {
         ...state,
         projectsFilter: null,
+      };
+    }
+    case 'HIDE_PROJECTS_FILTER': {
+      return {
+        ...state,
+        isProjectsFilterVisible: false,
+      };
+    }
+    case 'TOGGLE_PROJECTS_FILTER': {
+      return {
+        ...state,
+        isProjectsFilterVisible: !state.isProjectsFilterVisible,
       };
     }
     default:

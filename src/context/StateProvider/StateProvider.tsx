@@ -3,13 +3,14 @@ import { ComponentWithChildren } from '../../types/Component.types';
 import { StateType, ContextType } from './StateProvider.types';
 import appStateReducer from '../reducers/appStateReducer';
 
-export const GlobalStore = createContext({} as ContextType);
+export const StoreContext = createContext({} as ContextType);
 
 const StateProvider = ({ children }: ComponentWithChildren) => {
   const initialState: StateType = {
     error: null,
     isError: false,
     isLoggedIn: false,
+    isProjectsFilterVisible: false,
     isTabbingAround: false,
     projectsFilter: null,
   };
@@ -17,9 +18,9 @@ const StateProvider = ({ children }: ComponentWithChildren) => {
   const [state, dispatch] = useReducer(appStateReducer, initialState);
 
   return (
-    <GlobalStore.Provider value={{ dispatch, state }}>
+    <StoreContext.Provider value={{ dispatch, state }}>
       {children}
-    </GlobalStore.Provider>
+    </StoreContext.Provider>
   );
 };
 

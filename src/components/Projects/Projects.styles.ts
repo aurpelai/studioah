@@ -23,7 +23,13 @@ export const StyledFigure = styled.figure`
   align-items: center;
   display: flex;
   flex-flow: column nowrap;
-  margin: ${({ theme }) => `${theme.spacing.XXLARGE} 0 calc(${theme.spacing.XXLARGE} + ${theme.spacing.XXXLARGE})`};
+  margin: 0;
+  /* margin: ${({ theme }) => `${theme.spacing.XXLARGE} 0 calc(${theme.spacing.XXLARGE} + ${theme.spacing.XXXLARGE})`}; */
 `;
 
-export const StyledProjects = styled.section``;
+export const StyledProjects = styled.section`
+  display: grid;
+  grid-gap: ${({ theme }) => theme.spacing.XXXLARGE};
+  grid-template-columns: 1fr;
+  justify-content: center;
+`;

@@ -25,7 +25,11 @@ export const StyledNavLink = styled(StyledHeaderLink)`
 
 export const StyledNavLinkItem = styled.li`
   ${({ theme }) => theme.objects.Anchor.BaseAnchor};
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
   font-size: ${({ theme }) => theme.fontSizes.XLARGE};
+  justify-content: center;
   text-transform: lowercase;
 `;
 
@@ -58,7 +62,7 @@ export const StyledHeader = styled.header<StyledHeaderType>`
   flex-flow: column nowrap;
   font-size: ${({ theme }) => theme.fontSizes.XXXLARGE};
   justify-content: center;
-  margin: ${({ theme }) => `${theme.spacing.XXXLARGE} auto 0`};
+  margin: ${({ theme }) => `${theme.spacing.XXXLARGE} auto ${theme.spacing.XXLARGE}`};
   padding: ${({ theme }) => `${theme.spacing.XLARGE} 0 ${theme.spacing.MEDIUM}`};
   position: sticky;
   top: 0;

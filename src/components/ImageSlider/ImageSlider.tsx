@@ -1,6 +1,6 @@
-import React, { memo, useState } from 'react';
+import React, { memo, useContext, useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
-import theme from '../../themes/studioah';
+import { ThemeContext } from 'styled-components';
 import Icon from '../Icon/Icon';
 import LazyImage from '../LazyImage/LazyImage';
 import {
@@ -16,6 +16,7 @@ import { DirectionType, ImageSiderType } from './ImageSlider.types';
 
 const ImageSlider = ({ images }: ImageSiderType) => {
   const [currentImage, setCurrentImage] = useState(0);
+  const theme = useContext(ThemeContext);
 
   const slideRight = () => {
     setCurrentImage((currentImage + 1) % images.length);

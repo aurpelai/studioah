@@ -1,10 +1,9 @@
 import React, { memo, useContext } from 'react';
-import { GlobalStore } from '../../context/StateProvider/StateProvider';
+import { StoreContext } from '../../context/StateProvider/StateProvider';
 import projects from '../../data/projects';
 import { translateString, importAll, translatePlacement } from '../../utils';
 import ImageSlider from '../ImageSlider/ImageSlider';
 import { StackItemType } from '../ImageSlider/ImageSlider.types';
-import ProjectsFilter from '../ProjectsFilter/ProjectsFilter';
 import {
   StyledDescription,
   StyledDetails,
@@ -14,12 +13,10 @@ import {
 } from './Projects.styles';
 
 const Projects = () => {
-  const { state } = useContext(GlobalStore);
+  const { state } = useContext(StoreContext);
 
   return (
     <StyledProjects>
-      <ProjectsFilter />
-
       {projects
         .filter((project) => (state.projectsFilter ? project.categories.includes(state.projectsFilter) : true))
         .map((project) => {

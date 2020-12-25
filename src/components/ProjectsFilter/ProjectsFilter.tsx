@@ -5,12 +5,16 @@ import React, {
   useEffect,
 } from 'react';
 import { useTranslation } from 'react-i18next';
-import { GlobalStore } from '../../context/StateProvider/StateProvider';
+import { StoreContext } from '../../context/StateProvider/StateProvider';
 import { CategoryType } from '../../types/Project.types';
-import { StyledFilter, StyledProjectsFilter } from './ProjectsFilter.styles';
+import {
+  StyledFilter,
+  StyledFilterList,
+  StyledProjectsFilter,
+} from './ProjectsFilter.styles';
 
 const ProjectsFilter = () => {
-  const { dispatch, state } = useContext(GlobalStore);
+  const { dispatch, state } = useContext(StoreContext);
   const { t } = useTranslation();
 
   const clearFilters = useCallback((): void => dispatch({ type: 'CLEAR_PROJECTS_FILTER' }), [dispatch]);
@@ -20,25 +24,29 @@ const ProjectsFilter = () => {
 
   return (
     <StyledProjectsFilter>
-      <StyledFilter
-        isActive={state.projectsFilter === null}
-        onClick={clearFilters}
-        role="button"
-        tabIndex={0}
-      >
-        {t('Common.all')}
-      </StyledFilter>
-      {Object.values(CategoryType).map((categoryType) => (
+      <StyledFilterList isHidden={!state.isProjectsFilterVisible}>
         <StyledFilter
-          isActive={state.projectsFilter === categoryType}
-          key={categoryType}
-          onClick={() => handleFilterClick(categoryType)}
+          isActive={state.projectsFilter === null}
+          onClick={clearFilters}
           role="button"
           tabIndex={0}
         >
-          {t(`Categories.${categoryType}`)}
+          {t('Common.all')}
         </StyledFilter>
-      ))}
+
+        {Object.values(CategoryType).map((categoryType) => (
+          <StyledFilter
+            isActive={state.projectsFilter === categoryType}
+            key={categoryType}
+            onClick={() => handleFilterClick(categoryType)}
+            role="button"
+            tabIndex={0}
+          >
+            {t(`Categories.${categoryType}`)}
+          </StyledFilter>
+        ))}
+      </StyledFilterList>
+
     </StyledProjectsFilter>
   );
 };

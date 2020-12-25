@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import { FlattenSimpleInterpolation, css } from 'styled-components';
-import { GlobalStore } from '../../../context/StateProvider/StateProvider';
+import { StoreContext } from '../../../context/StateProvider/StateProvider';
 
 const AccessiblyRemoveFocusRing = (): FlattenSimpleInterpolation => {
-  const { state } = useContext(GlobalStore);
+  const { state } = useContext(StoreContext);
 
   return css`
     &::before {

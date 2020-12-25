@@ -24,7 +24,6 @@ const Header = () => {
   const { t } = useTranslation();
   const headerRef = createRef<HTMLDivElement>();
   const headerIsStuck = useIntersectionObserver({ ref: headerRef });
-
   const [currentLanguage, setCurrentLanguage] = useState(i18n.languages[0] as LanguageType);
 
   const toggleLanguage = () => {
@@ -55,10 +54,10 @@ const Header = () => {
       </StyledLogo>
       <StyledNavigationBar>
         <StyledNavLinkList>
-          {NavigationMenuDefinitions.map((navigationMenuDefinition) => (
-            <StyledNavLinkItem key={navigationMenuDefinition.titleKey}>
-              <StyledNavLink exact to={navigationMenuDefinition.path}>
-                {t(navigationMenuDefinition.titleKey)}
+          {NavigationMenuDefinitions.map((datum) => (
+            <StyledNavLinkItem key={datum.titleKey}>
+              <StyledNavLink exact to={datum.path}>
+                {t(datum.titleKey)}
               </StyledNavLink>
             </StyledNavLinkItem>
           ))}
@@ -66,7 +65,6 @@ const Header = () => {
             {t(currentLanguage === 'fi' ? 'Translation.en' : 'Translation.fi')}
           </StyledLanguageToggle>
         </StyledNavLinkList>
-
       </StyledNavigationBar>
     </StyledHeader>
   );
