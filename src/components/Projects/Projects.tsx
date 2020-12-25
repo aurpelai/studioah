@@ -1,53 +1,27 @@
-import React, { memo, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { memo, useContext } from 'react';
+import { GlobalStore } from '../../context/StateProvider/StateProvider';
 import projects from '../../data/projects';
-import { CategoryType } from '../../types/Project.types';
 import { translateString, importAll, translatePlacement } from '../../utils';
 import ImageSlider from '../ImageSlider/ImageSlider';
 import { StackItemType } from '../ImageSlider/ImageSlider.types';
+import ProjectsFilter from '../ProjectsFilter/ProjectsFilter';
 import {
   StyledDescription,
   StyledDetails,
   StyledFigure,
-  StyledFilter,
-  StyledFilters,
   StyledProjects,
   StyledTitle,
 } from './Projects.styles';
 
 const Projects = () => {
-  const { t } = useTranslation();
-  const [activeFilter, setActiveFilter] = useState<CategoryType | null>(null);
-
-  const clearFilters = (): void => setActiveFilter(null);
-  const handleFilterClick = (type: CategoryType): void => setActiveFilter(type);
+  const { state } = useContext(GlobalStore);
 
   return (
     <StyledProjects>
-      <StyledFilters>
-        <StyledFilter
-          isActive={activeFilter === null}
-          onClick={clearFilters}
-          role="button"
-          tabIndex={0}
-        >
-          {t('Common.all')}
-        </StyledFilter>
-        {Object.values(CategoryType).map((categoryType) => (
-          <StyledFilter
-            isActive={activeFilter === categoryType}
-            key={categoryType}
-            onClick={() => handleFilterClick(categoryType)}
-            role="button"
-            tabIndex={0}
-          >
-            {t(`Categories.${categoryType}`)}
-          </StyledFilter>
-        ))}
-      </StyledFilters>
+      <ProjectsFilter />
 
       {projects
-        .filter((project) => (activeFilter ? project.categories.includes(activeFilter) : true))
+        .filter((project) => (state.projectsFilter ? project.categories.includes(state.projectsFilter) : true))
         .map((project) => {
           const images = importAll(
             require.context('../../../public/images/projects', true, /\.(png|jpe?g|svg)$/),

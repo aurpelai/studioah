@@ -14,6 +14,18 @@ const appStateReducer: AppStateReducerType = (state, action) => {
         isTabbingAround: false,
       };
     }
+    case 'SET_PROJECTS_FILTER': {
+      return {
+        ...state,
+        projectsFilter: action.payload,
+      };
+    }
+    case 'CLEAR_PROJECTS_FILTER': {
+      return {
+        ...state,
+        projectsFilter: null,
+      };
+    }
     default:
       return state;
   }

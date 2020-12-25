@@ -46,5 +46,6 @@ export const StyledAbout = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: ${({ theme }) => theme.spacing.LARGE};
   text-align: center;
 `;

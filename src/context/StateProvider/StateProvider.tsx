@@ -11,6 +11,7 @@ const StateProvider = ({ children }: ComponentWithChildren) => {
     isError: false,
     isLoggedIn: false,
     isTabbingAround: false,
+    projectsFilter: null,
   };
 
   const [state, dispatch] = useReducer(appStateReducer, initialState);
