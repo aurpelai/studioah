@@ -36,6 +36,7 @@ export const StyledNavLinkItem = styled.li`
 export const StyledLanguageToggle = styled(StyledNavLinkItem)`
   ${({ theme }) => theme.mixins.AccessiblyRemoveFocusRing()}
   margin: 0 ${({ theme }) => theme.spacing.MEDIUM};
+  padding-bottom: ${({ theme }) => theme.spacing.XXXSMALL};
 `;
 
 export const StyledNavLinkList = styled.ul`
