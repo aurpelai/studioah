@@ -6,7 +6,6 @@ export const StyledFilter = styled.li<StyledFilterType>`
   border-bottom-color: transparent;
   border-bottom-style: solid;
   border-bottom-width: ${({ theme }) => theme.strokeWidths.THIN};
-  /* font-size: ${({ theme }) => theme.fontSizes.SMALL}; */
   text-transform: lowercase;
 
   ${({ isActive, theme }) => isActive && css`

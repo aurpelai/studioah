@@ -24,7 +24,6 @@ export const StyledFigure = styled.figure`
   display: flex;
   flex-flow: column nowrap;
   margin: 0;
-  /* margin: ${({ theme }) => `${theme.spacing.XXLARGE} 0 calc(${theme.spacing.XXLARGE} + ${theme.spacing.XXXLARGE})`}; */
 `;
 
 export const StyledProjects = styled.section`
