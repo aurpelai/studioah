@@ -1,4 +1,5 @@
 import React, { memo, useContext } from 'react';
+import { useTranslation } from 'react-i18next';
 import { StoreContext } from '../../context/StateProvider/StateProvider';
 import projects from '../../data/projects';
 import { translateString, importAll, translatePlacement } from '../../utils';
@@ -13,6 +14,7 @@ import {
 } from './Projects.styles';
 
 const Projects = () => {
+  useTranslation();
   const { state } = useContext(StoreContext);
 
   return (
