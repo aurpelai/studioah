@@ -8,13 +8,7 @@ export type PlacementType =
   | 'honorableMention'
   | 'entry';
 
-type CompetitionCategoryType =
-  | 'architecture'
-  | 'townPlanning'
-  | 'ideation';
-
 export interface CompetitionType {
-  category: CompetitionCategoryType,
   placement: PlacementType,
   placementDescription?: TranslatableStringType,
   title?: string,

@@ -9,7 +9,6 @@ const projects: ProjectType[] = [
       CategoryType.urban,
     ],
     competition: {
-      category: 'ideation',
       placement: 'purchase',
     },
     date: 2020,
@@ -25,13 +24,12 @@ const projects: ProjectType[] = [
     },
     title: {
       en: 'International Idea Competition for Linnanniemi',
-      fi: 'Turun Linnanniemen kansainvälinen ideakilpailu',
+      fi: 'Turun Linnanniemen kansainvälinen kilpailu',
     },
   },
   {
     categories: [CategoryType.housing],
     competition: {
-      category: 'architecture',
       placement: 'first',
     },
     date: 2018,
@@ -56,16 +54,15 @@ const projects: ProjectType[] = [
       CategoryType.public,
     ],
     competition: {
-      category: 'ideation',
       placement: 'first',
       placementDescription: {
-        en: '1st Prize',
-        fi: '1. palkinto kansainvälisessä ideakilpailussa',
+        en: '1st Prize in an international competition',
+        fi: '1. palkinto kansainvälisessä kilpailussa',
       },
     },
     date: 2016,
     description: {
-      en: 'International competition. A museum extension for a historically and culturally important context',
+      en: 'A museum extension for a historically and culturally important context',
       fi: 'Historiallisesti ja kulttuurisesti arvokkaan museokokonaisuuden yhteyksien ja toiminnallisuuden kehittäminen paikkaan sovitetulla laajennusosalla',
     },
     imageFolder: 'aalto',
@@ -86,7 +83,6 @@ const projects: ProjectType[] = [
       CategoryType.urban,
     ],
     competition: {
-      category: 'ideation',
       placement: 'second',
       placementDescription: {
         en: '2nd Prize',
@@ -115,7 +111,6 @@ const projects: ProjectType[] = [
       CategoryType.urban,
     ],
     competition: {
-      category: 'architecture',
       placement: 'entry',
     },
     date: 2020,
@@ -137,7 +132,6 @@ const projects: ProjectType[] = [
   {
     categories: [CategoryType.housing],
     competition: {
-      category: 'architecture',
       placement: 'entry',
     },
     date: 2017,
@@ -162,7 +156,6 @@ const projects: ProjectType[] = [
       CategoryType.urban,
     ],
     competition: {
-      category: 'architecture',
       placement: 'entry',
     },
     date: 2018,
@@ -192,7 +185,6 @@ const projects: ProjectType[] = [
       CategoryType.urban,
     ],
     competition: {
-      category: 'architecture',
       placement: 'entry',
     },
     date: 2017,
@@ -284,7 +276,7 @@ const projects: ProjectType[] = [
     categories: [CategoryType.housing],
     date: 2016,
     description: {
-      en: '',
+      en: 'Reasonably Priced Apartment Building in Laajasalo by Using the Idea of Principal Planning',
       fi: 'Kohtuuhintaisen asuinrakennuksen periaatemallin kehittäminen ja suunnittelu',
     },
     imageFolder: 'laajasalo',
@@ -298,7 +290,7 @@ const projects: ProjectType[] = [
       },
     },
     title: {
-      en: 'Reasonably Priced Apartment Building in Laajasalo by Using the Idea of Principal Planning',
+      en: 'Reasonably Priced Apartment Building',
       fi: 'Kohtuuhintaisen kerrostalon soveltaminen periaatekaavalla Laajasaloon',
     },
   },
@@ -308,11 +300,10 @@ const projects: ProjectType[] = [
       CategoryType.urban,
     ],
     competition: {
-      category: 'ideation',
       placement: 'sharedFirst',
       placementDescription: {
         en: 'Shared 1st Prize',
-        fi: 'Jaettu 1. palkinto ideakilpailussa',
+        fi: 'Jaettu 1. palkinto kilpailussa',
       },
     },
     date: 2014,
