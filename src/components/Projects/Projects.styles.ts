@@ -28,7 +28,7 @@ export const StyledFigure = styled.figure`
 
 export const StyledProjects = styled.section`
   display: grid;
-  grid-gap: ${({ theme }) => theme.spacing.XXXLARGE};
+  grid-gap: ${({ theme }) => theme.spacing.XXXXLARGE};
   grid-template-columns: 1fr;
   justify-content: center;
 `;

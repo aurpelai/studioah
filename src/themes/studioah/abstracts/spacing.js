@@ -8,6 +8,7 @@ const spacing = {
   XLARGE: '1.5rem',
   XXLARGE: '2rem',
   XXXLARGE: '4rem',
+  XXXXLARGE: '8rem',
 };
 
 export default spacing;
