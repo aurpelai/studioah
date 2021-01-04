@@ -40,3 +40,7 @@ export interface ProjectType {
   location?: LocationType,
   title: TranslatableStringType,
 }
+
+export interface ProjectRenderType extends ProjectType {
+  images: string[],
+}

@@ -5,9 +5,7 @@ import {
   TranslatableStringType,
 } from '../i18n/i18n.types';
 import { CompetitionType } from '../types/Project.types';
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type ImportFileType = Record<string, any>;
+import { ImportFileType } from './index.types';
 
 export const importAll = (
   requireContext: __WebpackModuleApi.RequireContext,

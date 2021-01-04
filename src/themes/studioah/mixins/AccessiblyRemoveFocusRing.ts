@@ -7,7 +7,7 @@ const AccessiblyRemoveFocusRing = (): FlattenSimpleInterpolation => {
 
   return css`
     &::before {
-      display: ${!state.isTabbingAround ? 'none' : undefined};
+      display: ${!state.isUserTabbingAround ? 'none' : undefined};
     }
   `;
 };

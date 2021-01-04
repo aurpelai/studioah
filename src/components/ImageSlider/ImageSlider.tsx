@@ -1,4 +1,8 @@
-import React, { memo, useContext, useState } from 'react';
+import React, {
+  memo,
+  useContext,
+  useState,
+} from 'react';
 import { useSwipeable } from 'react-swipeable';
 import { ThemeContext } from 'styled-components';
 import Icon from '../Icon/Icon';
@@ -72,7 +76,7 @@ const ImageSlider = ({ images }: ImageSiderType) => {
 
   return (
     <StyledImageSlider>
-      <LazyImage src={images[currentImage].src} />
+      <LazyImage src={images[currentImage]} />
 
       <StyledImageButtonContainer
         // eslint-disable-next-line react/jsx-props-no-spreading
@@ -97,7 +101,7 @@ const ImageSlider = ({ images }: ImageSiderType) => {
         {images.map((image, idx) => (
           <StyledImageNavigationDot
             isActive={idx === currentImage}
-            key={image.id}
+            key={image}
             onClick={() => setCurrentImage(idx)}
           >
             &bull;

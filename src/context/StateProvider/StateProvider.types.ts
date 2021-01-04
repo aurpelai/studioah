@@ -6,7 +6,7 @@ export interface StateType {
   isError: boolean,
   isLoggedIn: boolean,
   isProjectsFilterVisible: boolean,
-  isTabbingAround: boolean,
+  isUserTabbingAround: boolean,
   projectsFilter: CategoryType | null,
 }
 

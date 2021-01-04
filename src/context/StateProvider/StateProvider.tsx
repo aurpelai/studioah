@@ -11,7 +11,7 @@ const StateProvider = ({ children }: ComponentWithChildren) => {
     isError: false,
     isLoggedIn: false,
     isProjectsFilterVisible: false,
-    isTabbingAround: false,
+    isUserTabbingAround: false,
     projectsFilter: null,
   };
 

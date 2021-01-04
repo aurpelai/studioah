@@ -5,13 +5,13 @@ const appStateReducer: AppStateReducerType = (state, action) => {
     case 'SET_TABBING_AROUND': {
       return {
         ...state,
-        isTabbingAround: true,
+        isUserTabbingAround: true,
       };
     }
     case 'CLEAR_TABBING_AROUND': {
       return {
         ...state,
-        isTabbingAround: false,
+        isUserTabbingAround: false,
       };
     }
     case 'SHOW_PROJECTS_FILTER': {
