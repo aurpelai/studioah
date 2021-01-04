@@ -15,8 +15,7 @@ export const StyledNavLink = styled(StyledHeaderLink)`
   border-bottom-color: transparent;
   border-bottom-style: solid;
   border-bottom-width: ${({ theme }) => theme.strokeWidths.THIN};
-  margin: 0 ${({ theme }) => theme.spacing.MEDIUM};
-  padding-bottom: ${({ theme }) => theme.spacing.XXXSMALL};
+  padding: ${({ theme }) => `0 ${theme.spacing.XXSMALL}`};
 
   &.active {
     border-bottom-color: ${({ theme }) => theme.colors.GREY_400};
@@ -30,6 +29,7 @@ export const StyledNavLinkItem = styled.li`
   flex-flow: row nowrap;
   font-size: ${({ theme }) => theme.fontSizes.XLARGE};
   justify-content: center;
+  margin: 0 ${({ theme }) => theme.spacing.SMALL};
   text-transform: lowercase;
 `;
 
